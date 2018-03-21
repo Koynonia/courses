@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+
+  <title>Tabs</title>
+</head>
+<body>
+
+<div class="container">
+  <div>
+    <h1>Tabs Bootstrap</h1>
+    <hr>
+    <p class="lead">Alterne facilmente entre conteúdos</p>
+  </div><!-- page-header -->
+
+  <!-- Criação de abas -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item"><a class="nav-link active" href="#info" role="tab" data-toggle="tab">Informações</a></li>
+    <li class="nav-item"><a class="nav-link" href="#ava" role="tab" data-toggle="tab">Avaliações</a></li>
+    <li class="nav-item"><a class="nav-link" href="#com" role="tab" data-toggle="tab">Compre também</a></li>
+  </ul>
+
+  <!-- Conteúdo das abas -->
+  <div class="tab-content">
+
+    <!-- aba informações -->
+    <div class="tab-pane active" id="info" role="tabpanel">
+      <br>
+      <h3>Informações</h3>
+      <p>Lorem ipsum dolor sit amet, Informações</p>
+  </div>
+
+  <!-- aba Avaliações -->
+  <div class="tab-pane" id="ava" role="tabpanel">
+    <br>
+    <h3>Avaliações</h3>
+    <p>Lorem ipsum dolor sit amet, Avaliações</p>
+
+    <button type="button"
+      class="btn btn-outline-primary"
+      data-toggle="tooltip"
+      data-placement="right"
+      title="Detalhes do item">
+      Dica
+    </button><!-- tooltip -->
+  </div>
+
+  <!-- aba Compre também -->
+  <div class="tab-pane" id="com" role="tabpanel">
+    <br>
+    <h3>Compre também</h3>
+    <p>Lorem ipsum dolor sit amet, Compre também</p>
+
+    <button type="button" 
+    class="btn btn-danger"
+    data-toggle="popover"
+    data-placement="right"
+    title="Detalhes"
+    data-content="Lorem ipsum dolor sit amet">
+    Detalhes
+  </button><!-- popover -->
+</div>
+
+</div>
+
+</div><!-- container -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+
+  <title>Tooltip & Popover</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Tooltip & Popover Bootstrap</h1>
+    <hr>
+  </div>
+
+  <!-- Accessible Rich Internet Applications (ARIA) -->
+
+<h3>Tooltip</h3>
+<button type="button"
+        class="btn btn-outline-primary"
+        data-toggle="tooltip"
+        data-placement="right"
+        title="Detalhes do item">
+  Dica
+</button>
+<br><br>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+     <div class="btn-group mr-2" role="group" aria-label="First group">
+       <button type="button" 
+                class="btn btn-outline-secondary"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Tocar">
+         <span class="fa fa-play"></span>
+       </button>
+       <button type="button" 
+                class="btn btn-outline-secondary"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Pausar">
+         <span class="fa fa-pause"></span>
+       </button>
+        <button type="button" 
+                class="btn btn-outline-secondary"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Parar">
+         <span class="fa fa-stop"></span>
+       </button>
+     </div>
+   </div>
+<br><br>
+<h3>Popover</h3>
+<button type="button" 
+                class="btn btn-danger"
+                data-toggle="popover"
+                data-placement="right"
+                title="Detalhes"
+                data-content="Lorem ipsum dolor sit amet">
+         Detalhes
+       </button>
+
+</div><!-- container -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
