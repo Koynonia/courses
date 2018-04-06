@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+
+		<title>Calculadora em PHP</title>
+	</head>
+	<body>
+		<h1>Calculadora em PHP</h1>
+		
+		<form method="POST" action="calcular.php">
+			<label>
+				Primeiro numero:
+				<input type="text" name="numero1">
+			</label>
+			<br><br>
+			<label>
+				Segundo numero:
+				<input type="text" name="numero2">
+			</label>
+			<br>
+			<br>
+			Operacao:
+			<br><br>
+			<label>
+				<input type="radio" name="operacao" value="somar">
+				Somar
+			</label>
+			
+			<label>
+				<input type="radio" name="operacao" value="subtrair">
+				Subtrair
+			</label>
+			
+			<label>
+				<input type="radio" name="operacao" value="multiplicar">
+				Multiplicar
+			</label>
+			
+			<label>
+				<input type="radio" name="operacao" value="dividir">
+				Dividir
+			</label>
+			<br><br>
+			<input type="submit" value="Calcular">
+			
+		</form>
+		
+	</body>
+</html>
