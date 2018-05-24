@@ -15,7 +15,7 @@ class db {
 		// Ajustar o charset de comunicação entre a aplicação e o banco de dados
 		mysqli_set_charset($con, 'utf8');
 		
-		// Verificar se houve erros de conexãor
+		// Verificar se houve erros de conexão
 		if(mysqli_connect_errno()){
 			echo 'Erro ao tentar se conectar com o BD MySQL: \n\n'.mysqli_connect_error();
 		}
