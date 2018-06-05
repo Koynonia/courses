@@ -33,17 +33,27 @@
 								// Em caso de formularios com varios campos, usa-se a função do jquery 'serialize'
 								// que retorna a propriedade 'name' como chaves dos campos e seus valores de uma tag 'form',
 								// e retornando um JSON, exemplo:
-								// data: $('#form_tweet').serialize(),
-								data: { texto_tweet: $('#texto_tweet').val() },
+								data: $('#form_tweet').serialize(),
+								// ou poderia ser campo a campo, usando a tag "div"
+								//data: { texto_tweet: $('#texto_tweet').val() },
 								success: function(data){
 									$('#texto_tweet').val('');
-									alert('Tweet incluído com sucesso!');
+									atualizaTweet();
 								}
 							});
 					}
 
 				});
-
+				
+				function atualizaTweet(){
+					$.ajax({
+						url: 'get_tweet.php',
+						success: function(data){
+							$('#tweets').html(data);
+						}
+					});
+				}
+				atualizaTweet();
 			});
 
 		</script>
@@ -92,13 +102,17 @@
 			<div class="col-sm-6 col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<div class="input-group">
-							<input type="text" id="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140" />
+						<form id="form_tweet" class="input-group">
+							<input type="text" id="texto_tweet" name="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140" />
 							<span class="input-group-btn">
 								<button class="btn btn-default" id="btn_tweet" type="button">Tweet</button>
 							</span>
-						</div>
+						</form>
 					</div>
+				</div>
+				
+				<div id="tweets" class="list-group">
+					
 				</div>
 			</div>
 			<div class="col-sm-3 col-md-3">
