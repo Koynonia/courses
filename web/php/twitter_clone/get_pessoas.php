@@ -30,8 +30,9 @@
 			echo '<a href="#" class="list-group-item">';
 				echo '<strong>'.$registro['usuario'].'</strong> <small> - '.$registro['email'].' </small>';
 				echo '<p class="list-group-item-text pull-right">';
-						echo '<button type="button" class="btn-default">Seguir</button>';
+						echo '<button type="button" class="btn btn-default btn_seguir">Seguir</button>';
 				echo '</p>';
+				echo '<div class="clearfix"></div>';
 			echo '</a>';
 		}
 	} else {
