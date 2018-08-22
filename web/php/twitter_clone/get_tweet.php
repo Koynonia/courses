@@ -21,6 +21,7 @@
 	$sql.= " FROM tweet AS t ";
 	$sql.= " JOIN usuarios AS u ON (t.id_usuario = u.id) ";
 	$sql.= " WHERE id_usuario = $id_usuario ";
+	$sql.= " OR id_usuario IN (SELECT seguindo_id_usuario FROM usuarios_seguidores WHERE id_usuario = $id_usuario) ";
 	$sql.= " ORDER BY data_inclusao DESC ";
 
 	// Execusão da consulta
